@@ -1,108 +1,83 @@
-import React from 'react'
-import { Rocket, Menu, Search, BaggageClaim, Lightbulb, Briefcase, Zap, Clock } from "lucide-react";
+import React from 'react';
+import { Briefcase, Zap, Lightbulb, Clock } from "lucide-react";
+
+const techStack = [
+  { name: 'Flutter', color: '#3A83F7', bg: '#3F4E66', initial: 'F' },
+  { name: 'React Native', color: '#FF006E', bg: '#663349', initial: 'R' },
+  { name: 'Java', color: '#3A83F7', bg: '#3F4E66', initial: 'J' },
+  { name: 'Kotlin', color: '#FF006E', bg: '#663349', initial: 'K' },
+  { name: 'Laravel', color: '#3A83F7', bg: '#3F4E66', initial: 'L' },
+  { name: 'PHP', color: '#FF006E', bg: '#663349', initial: 'P' },
+];
+
+const highlights = [
+  {
+    icon: <Briefcase className='text-blue-400' />,
+    bg: 'bg-[#3F4E66]',
+    title: 'Experience',
+    desc: '1+ years in Full-Stack Development'
+  },
+  {
+    icon: <Zap className='text-[#FF006E]' />,
+    bg: 'bg-[#511E34]',
+    title: 'Fast Delivery',
+    desc: 'Quick turnaround time on projects'
+  },
+  {
+    icon: <Lightbulb className='text-blue-400' />,
+    bg: 'bg-[#3F4E66]',
+    title: 'Creative Solutions',
+    desc: 'Innovative approaches to problems'
+  },
+  {
+    icon: <Clock className='text-[#FF006E]' />,
+    bg: 'bg-[#511E34]',
+    title: 'Timely Support',
+    desc: 'Responsive and reliable assistance'
+  }
+];
 
 const AboutCard = () => {
   return (
-    // the cards of about-section
-<div className=''>
-    <div className='flex gap-2'>
-        <div className='h-[60px] flex w-53 rounded-xl mt-6 p-2 bg-[#404040]'>
-           <div className='h-[40px] flex justify-center items-center w-10 rounded-4xl bg-[#3F4E66]'>
-            <h3 className='font-semibold text-[#3A83F7] text-xl'>F</h3>
-           </div>
-           <h1 className='pl-4 text-white pt-1 text-xl'>Flutter</h1>
-        </div>
+    <div className='mt-4'>
 
-        <div className='h-[60px] flex w-53 rounded-xl mt-6 p-2 bg-[#404040]'>
-            <div className='h-[40px] flex justify-center items-center w-10 rounded-4xl bg-[#663349]'>
-            <h3 className='font-semibold text-[#FF006E] text-xl'>R</h3>
+      {/* Tech Stack */}
+      <div className='grid sm:grid-cols-3 gap-4'>
+        {techStack.map((tech, index) => (
+          <div
+            key={index}
+            className='flex items-center bg-[#404040] rounded-xl p-3 h-[60px]'
+          >
+            <div
+              className={`h-[40px] w-[40px] rounded-full flex items-center justify-center`}
+              style={{ backgroundColor: tech.bg }}
+            >
+              <h3 className='font-semibold text-xl' style={{ color: tech.color }}>
+                {tech.initial}
+              </h3>
             </div>
-            <h1 className='pl-4 text-white pt-1 text-xl'>React Native</h1>
-        </div>
+            <h1 className='text-white text-xl pl-4'>{tech.name}</h1>
+          </div>
+        ))}
+      </div>
 
-        <div className='h-[60px] flex w-53 rounded-xl mt-6 p-2 bg-[#404040]'>
-            <div className='h-[40px] flex justify-center items-center w-10 rounded-4xl bg-[#3F4E66]'>
-            <h3 className='font-semibold text-[#3A83F7] text-xl'>J</h3>
+      {/* Highlights */}
+      <div className='grid sm:grid-cols-2 gap-6 mt-10'>
+        {highlights.map((item, index) => (
+          <div key={index} className='flex bg-[#262626] p-4 rounded-xl items-center'>
+            <div className={`h-12 w-12 rounded-full flex items-center justify-center ${item.bg}`}>
+              {item.icon}
             </div>
-            <h1 className='pl-4 text-white pt-1 text-xl'>Java</h1>
-        </div>
-    </div>
-
-    <div className='flex gap-2'>
-        <div className='h-[60px] flex w-53 rounded-xl mt-6 p-2 bg-[#404040]'>
-            <div className='h-[40px] flex justify-center items-center w-10 rounded-4xl bg-[#663349]'>
-            <h3 className='font-semibold text-[#FF006E] text-xl'>K</h3>
+            <div className='ml-4'>
+              <h2 className='text-xl font-semibold text-white'>{item.title}</h2>
+              <p className='text-[#9A9A9A]'>{item.desc}</p>
             </div>
-            <h1 className='pl-4 text-white pt-1 text-xl'>Kotlin</h1>
-        </div>
-
-        <div className='h-[60px] flex w-53 rounded-xl mt-6 p-2 bg-[#404040]'>
-           <div className='h-[40px] flex justify-center items-center w-10 rounded-4xl bg-[#3F4E66]'>
-            <h3 className='font-semibold text-[#3A83F7] text-xl'>L</h3>
-           </div>
-           <h1 className='pl-4 text-white pt-1 text-xl'>Laravel</h1>
-        </div>
-
-        <div className='h-[60px] flex w-53 rounded-xl mt-6 p-2 bg-[#404040]'>
-            <div className='h-[40px] flex justify-center items-center w-10 rounded-4xl bg-[#663349]'>
-            <h3 className='font-semibold text-[#FF006E] text-xl'>P</h3>
-            </div>
-            <h1 className='pl-4 text-white pt-1 text-xl'>PHP</h1>
-        </div>
-    </div>
-
-
-    <div className='mt-10'>
-        <div className='flex'>
-            <div className='h-17 w-83 bg-[#262626] p-2 flex'>
-                <div className='h-12 w-12 bg-[#3F4E66] rounded-4xl p-3'>
-                    <Briefcase className='text-blue-400'/>
-                </div>
-                <div className='ml-4'>
-                    <h2 className='text-xl font-semibold text-white'>Experience</h2>
-                    <p className='text-[#9A9A9A]'>1+ years in Full-Stack Development</p>
-                </div>
-            </div>
-
-            <div className='h-17 w-83 bg-[#262626] p-2 flex'>
-                <div className='h-12 w-12 bg-[#511E34] rounded-4xl p-3'>
-                    <Zap className='text-[#FF006E]'/>
-                </div>
-                <div className='ml-4'>
-                    <h2 className='text-xl font-semibold text-white'>Fast Delivery</h2>
-                    <p className='text-[#9A9A9A]'>Quick turnaround time on projects</p>
-                </div>
-            </div>
-        </div>
-        {/* third one */}
-        <div className='flex'>
-            <div className='h-17 w-83 bg-[#262626] p-2 flex'>
-                <div className='h-12 w-12 bg-[#3F4E66] rounded-4xl p-3'>
-                    <Lightbulb className='text-blue-400'/>
-                </div>
-                <div className='ml-4'>
-                    <h2 className='text-xl font-semibold text-white'>Creative Solutions</h2>
-                    <p className='text-[#9A9A9A]'>Innovative approaches to problems</p>
-                </div>
-            </div>
-
-            <div className='h-17 w-83 bg-[#262626] p-2 flex'>
-                <div className='h-12 w-12 bg-[#511E34] rounded-4xl p-3'>
-                    <Clock className='text-[#FF006E]'/>
-                </div>
-                <div className='ml-4'>
-                    <h2 className='text-xl font-semibold text-white'>Timely Support</h2>
-                    <p className='text-[#9A9A9A]'>Responsive and reliable assistance</p>
-                </div>
-            </div>
-
-            
-        </div>
+          </div>
+        ))}
+      </div>
 
     </div>
-    
-</div>
-  )
-}
+  );
+};
 
-export default AboutCard
+export default AboutCard;

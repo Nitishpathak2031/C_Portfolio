@@ -1,16 +1,16 @@
-import { Camera, Settings,MessageCircle, WholeWord, Settings2Icon, SearchCheckIcon } from 'lucide-react';
+import { MessageCircle, WholeWord, Settings2Icon, SearchCheckIcon } from 'lucide-react';
 import ProjectCard from '../ProjectCard';
-import { FaMobileAlt, FaDesktop, FaDollarSign, FaResolving } from "react-icons/fa";
+import { FaResolving } from "react-icons/fa";
 import Line from '../line';
 import { SiStaffbase } from 'react-icons/si';
 
-const project = [
+const projects = [
   {
     id: 1,
     icon: <SiStaffbase />,
     title: "StaffTrack",
     description:
-      "StaffTrack is a web app for managing employee details with Supports add, edit, delete, and view operations",
+      "StaffTrack is a web app for managing employee details with add, edit, delete, and view operations.",
     tags: ["React", "Tailwind", "State Management"],
     demoLink: '#',
     githubLink: "#",
@@ -21,8 +21,8 @@ const project = [
     icon: <SearchCheckIcon />,
     title: "Sorting Visualizer",
     description:
-      "Sorting Visualizer is a Html , Css and Javascript web app that visually demonstrates how sorting algorithms work in real time. ",
-    tags: ["HTML/CSS", "Javascript", "DSA"],
+      "An interactive web app that visually demonstrates how sorting algorithms work in real time.",
+    tags: ["HTML/CSS", "JavaScript", "DSA"],
     demoLink: "#",
     githubLink: "#",
     tech: "JavaScript",
@@ -30,32 +30,32 @@ const project = [
   {
     id: 3,
     icon: <Settings2Icon />,
-    title: "Laptop Price Pridiction",
+    title: "Laptop Price Prediction",
     description:
-      "A personal finance app with budget planning, expense tracking, and visual reports to help users manage finances.",
-    tags: ["Machine Learing", "StreamLit", "Alogorithm"],
+      "Machine learning model to predict laptop prices using Streamlit interface.",
+    tags: ["Machine Learning", "Streamlit", "Algorithm"],
     demoLink: "#",
     githubLink: "#",
-    tech: "Machine Learing",
+    tech: "ML",
   },
   {
     id: 4,
     icon: <FaResolving />,
-    title: "AI-Code-Reviewer",
+    title: "AI Code Reviewer",
     description:
-      "A full-stack AI-powered code reviewer tool that lets developers get detailed feedback on their code",
-    tags: ["React", "API Integration","Node JS"],
+      "AI-powered tool that provides feedback and suggestions on code for better quality and performance.",
+    tags: ["React", "API Integration", "Node.js"],
     demoLink: "#",
     githubLink: "#",
-    tech: "React",
+    tech: "Full Stack",
   },
   {
     id: 5,
     icon: <WholeWord />,
     title: "World Atlas",
     description:
-      "World Atlas is a React-based interactive map app displaying countries, flags, and basic info using public APIs",
-    tags: ["React", "API integration", "Node"],
+      "Interactive map application displaying countries, flags, and basic information using public APIs.",
+    tags: ["React", "API Integration", "Node"],
     demoLink: "#",
     githubLink: "#",
     tech: "React",
@@ -65,7 +65,7 @@ const project = [
     icon: <MessageCircle />,
     title: "Crypto Wallet",
     description:
-      "Secure wallet application for cryptocurrency transactions and balance tracking.",
+      "Secure wallet application for cryptocurrency transactions and real-time balance tracking.",
     tags: ["React Native", "Blockchain", "Security"],
     demoLink: "#",
     githubLink: "#",
@@ -75,22 +75,20 @@ const project = [
 
 const Projects = () => {
   return (
-    <section id="projects" >
-     <section className="py-25 px-6 bg-[#303030]">
-      <h1 className="text-white text-4xl font-bold text-center mb-3">
-        Projects 
+    <section id="projects" className="bg-[#303030] py-20 px-4 sm:px-10">
+      <h1 className="text-white text-4xl font-bold text-center mb-4">
+        Projects
       </h1>
       <Line />
-      <p className="text-gray-400 text-center mb-10">
+      <p className="text-gray-400 text-center mb-10 max-w-2xl mx-auto">
         Explore my latest work and see how I bring ideas to life with code and creativity.
       </p>
 
-      <div className="flex flex-wrap gap-6 justify-center items-start">
-        {project.map((item) => (
+      <div className="flex flex-wrap gap-8 justify-center items-start">
+        {projects.map((item) => (
           <ProjectCard key={item.id} {...item} />
         ))}
       </div>
-    </section>
     </section>
   );
 };

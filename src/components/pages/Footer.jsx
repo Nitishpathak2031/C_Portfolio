@@ -28,13 +28,12 @@ const Footer = () => {
       <div className="flex flex-col items-center md:items-start">
         <h3 className="text-lg font-bold bg-gradient-to-r from-[#4081FA] to-[#FA0472] bg-clip-text text-transparent mb-2">Quick Links</h3>
         <ul className=" text-gray-400 space-y-1 text-center md:text-left">
-          <li><a href="#" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  Home</a></li>
-          <li><a href="#" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  About</a></li>
-          <li><a href="#" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  Services</a></li>
-          <li><a href="#" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  Projects</a></li>
-          <li><a href="#" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  Team</a></li>
-          <li><a href="#" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  Contact</a></li>
-          <li><a href="#" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  Privacy</a></li>
+          <li><a href="#home" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  Home</a></li>
+          <li><a href="#about" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  About</a></li>
+          <li><a href="#services" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  Services</a></li>
+          <li><a href="#projects" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  Projects</a></li>
+          <li><a href="#team" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  Team</a></li>
+          <li><a href="#contact" className="hover:text-pink-500"><span className='text-blue-600 text-2xl'>{'\u203A'}</span>  Contact</a></li>
         </ul>
       </div>
       </div>
@@ -52,8 +51,7 @@ const Footer = () => {
 
       <div className="flex flex-col items-center md:items-start">
         <h3 className="text-lg font-bold bg-gradient-to-r from-[#4081FA] to-[#FA0472] bg-clip-text text-transparent mb-2">Contact Us</h3>
-        <p className='text-gray-400 flex gap-1'><PhoneCall />+91 8127511605</p>
-        <p className='text-gray-400 flex gap-1'><MessageCircle />nitishpathak203@gmail.com</p>
+        <p className='text-gray-400 flex gap-1 mb-2'><MessageCircle />nitishpathak203@gmail.com</p>
         <p className='text-gray-400 flex gap-1'><LocateIcon />Jaipur, India</p>
 
         <div className="mt-4 w-full">

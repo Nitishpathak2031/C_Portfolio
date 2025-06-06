@@ -1,6 +1,3 @@
-
-import { Route, Routes } from 'react-router-dom'
-import './App.css'
 import Navbar from './components/navbar'
 import About from './components/pages/About'
 import Services from './components/pages/Services'
@@ -11,22 +8,18 @@ import Testimonial from './components/pages/Testimonial'
 import Home from './components/pages/Home'
 
 
-
-
 function App() {
-
   return (
     <>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/services' element={<Services/>}/>
-        <Route path='/projects' element={<Projects/>}/>
-        <Route path='/teams' element={<Teams/>}/>
-        <Route path='/testimonial' element={<Testimonial/>}/>
-        <Route path='/contact' element={<Contacts/>}/>
-        </Routes>
+      <Navbar />
+      {/* Put each component inside a section with the right id */}
+      <section id='home'><Home /></section>
+      <section id="about"><About /></section>
+      <section id="services"><Services /></section>
+      <section id="projects"><Projects /></section>
+      <section id="teams"><Teams /></section>
+      <section id="testimonial"><Testimonial /></section>
+      <section id="contact"><Contacts /></section>
     </>
   )
 }
